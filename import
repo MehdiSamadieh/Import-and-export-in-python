@@ -1,0 +1,17 @@
+
+def main():
+    import csv
+    with open('Scaled Features Selected.csv') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        for line in csv_reader:
+            print(line)
+
+        with open('1.csv') as csv_file:
+            csv_writer = csv.reader(csv_file, delimiter='-')
+            for line in csv_reader:
+                csv_writer.writerow(line)
+
+
+
+main()
+
